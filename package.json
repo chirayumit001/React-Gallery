@@ -7,7 +7,23 @@
 		"build": "next build",
 		"start": "next start",
 		"format": "prettier --write",
-		"lint-and-fix": "eslint . --ext .ts --fix"
+		"lint-and-fix": "eslint . --ext .ts --fix",
+		"prepare": "husky install",
+		"lint-staged": "lint-staged"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.{json,md,html}": [
+			"prettier --write"
+		]
 	},
 	"dependencies": {
 		"@next/eslint-plugin-next": "^11.1.2",
@@ -29,7 +45,21 @@
 		"eslint-plugin-prettier": "^4.0.0",
 		"eslint-plugin-react": "^7.25.1",
 		"eslint-plugin-react-hooks": "^4.2.0",
+		"husky": "^7.0.2",
+		"lint-staged": "^11.1.2",
 		"prettier": "^2.4.0",
 		"typescript": "4.4.3"
-	}
+	},
+	"description": "Gallery component implemented in React",
+	"main": "next.config.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chirayumit001/React-Gallery.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/chirayumit001/React-Gallery/issues"
+	},
+	"homepage": "https://github.com/chirayumit001/React-Gallery#readme"
 }

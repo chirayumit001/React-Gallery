@@ -8,8 +8,7 @@
 		"start": "next start",
 		"format": "prettier --write",
 		"lint-and-fix": "eslint . --ext .ts --fix",
-		"prepare": "husky install",
-		"lint-staged": "lint-staged"
+		"prepare": "husky install"
 	},
 	"husky": {
 		"hooks": {

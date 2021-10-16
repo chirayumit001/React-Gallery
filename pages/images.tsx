@@ -4,27 +4,27 @@ const images = [
 		id: 1,
 	},
 	{
-		src: 'https://picsum.photos/400/400?image=1039',
+		src: '/images/naruto.png',
 		id: 2,
 	},
 	{
-		src: 'https://picsum.photos/200/200?image=997',
+		src: '/images/naruto.png',
 		id: 3,
 	},
 	{
-		src: 'https://picsum.photos/200/300?image=1050',
+		src: '/images/naruto.png',
 		id: 4,
 	},
 	{
-		src: 'https://picsum.photos/200/300?image=1050',
+		src: '/images/naruto.png',
 		id: 5,
 	},
 	{
-		src: 'https://picsum.photos/200/300?image=1050',
+		src: '/images/naruto.png',
 		id: 6,
 	},
 	{
-		src: 'https://picsum.photos/200/300?image=1050',
+		src: '/images/naruto.png',
 		id: 7,
 	},
 ]

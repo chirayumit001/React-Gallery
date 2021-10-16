@@ -1,5 +1,4 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 import images from './images'
@@ -10,26 +9,25 @@ const Home: NextPage = () => (
 
 		<div className='col'>
 			{images.map((image, i) => (
-				<img
+				<Image
 					height={100}
 					width={100}
 					key={images[i].id}
 					src={images[i].src}
-					alt=''
-					style={{ display: 'block' }}
+					alt='Image'
 				/>
 			))}
-			<img src='/images/naruto.png' height={500} width={900} />
+			<Image src='/images/naruto.png' height={500} width={900} alt='Image' />
 		</div>
 
 		<div>
 			{images.map((image, i) => (
-				<img
+				<Image
 					height={100}
 					width={100}
 					key={images[i].id}
 					src={images[i].src}
-					alt=''
+					alt='Image'
 				/>
 			))}
 		</div>

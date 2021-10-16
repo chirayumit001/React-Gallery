@@ -1,5 +1,3 @@
-import Naruto from '../public/images/naruto.png'
-
 const images = [
 	{
 		src: '/images/naruto.png',

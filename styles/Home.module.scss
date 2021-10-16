@@ -10,6 +10,11 @@
 	height: 100vh;
 }
 
+.col {
+	display: flex;
+	flex-direction: row;
+}
+
 .main {
 	padding: 5rem 0;
 	flex: 1;

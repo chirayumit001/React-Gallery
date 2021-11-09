@@ -1,13 +1,72 @@
 @import 'mixins.scss';
 
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
 .container {
-	min-height: 100vh;
-	padding: 0 0.5rem;
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	height: 600px;
+	width: 80%;
+	margin: auto;
+}
+
+.main_body {
+	position: relative;
+	list-style: none;
+	padding: 10px;
+	height: 100%px;
+	transition: transform 250ms ease-in;
+}
+
+.gal_image {
+	margin: auto;
+	width: 80%;
+}
+
+.car_slide {
+	position: absolute;
+	top: 0%;
+	bottom: 0;
+	width: 100%;
+	// height: 500px;
+}
+
+.track_container {
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.car_but {
+	// display: flex;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	margin: auto;
+}
+
+#rightBut {
+	display: flex;
+	justify-content: center;
+	float: right;
+	flex-direction: row;
+	margin: auto;
+}
+
+// #leftBut {
+// 	display: table-row;
+// 	justify-content: center;
+// 	float: right;
+// 	flex-direction: row;
+// 	margin: auto;
+// }
+
+.car_nav {
+	margin: auto;
 }
 
 .row {

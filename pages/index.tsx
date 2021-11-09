@@ -1,39 +1,45 @@
-import type { NextPage } from 'next'
+import { useState } from 'react'
 import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
-import images from './images'
 
-const Home: NextPage = () => (
-	<div className={styles.container}>
-		<h1>Welcome to Gallery</h1>
+function Home() {
+	const [index, setindex] = useState(0)
+	const [index1, setindex1] = useState(0)
 
-		<div className={styles.row}>
+	const images = ['images/naruto.png', 'images/snowfall.png']
+
+	const handlePrev = () => {
+		setindex((index + 3 - images.length) % images.length)
+		setindex1((index1 + 1) % images.length)
+	}
+
+	const handleNext = () => {
+		setindex((index + 1) % images.length)
+		setindex1((index1 + 1) % images.length)
+	}
+
+	const list = []
+
+	for (let i = 0; i < images.length; i + 1) {
+		list.push(<Image height={100} src={images[i]} alt='' />)
+	}
+
+	return (
+		<>
 			<div className={styles.container}>
-				{images.map((image, i) => (
-					<Image
-						height={100}
-						width={100}
-						key={images[i].id}
-						src={images[i].src}
-						alt='Image'
-					/>
-				))}
+				<button type='button' onClick={handlePrev}>
+					{'<'}
+				</button>
+				<div className={styles.main}>
+					<Image height={450} src={images[index]} alt='' />
+					<div className='styles container'>{list}</div>
+				</div>
+				<button type='button' onClick={handleNext}>
+					{'>'}
+				</button>
 			</div>
-			<Image src='/images/snowfall.png' height={500} width={900} alt='Image' />
-		</div>
-
-		<div>
-			{images.map((image, i) => (
-				<Image
-					height={100}
-					width={100}
-					key={images[i].id}
-					src={images[i].src}
-					alt='Image'
-				/>
-			))}
-		</div>
-	</div>
-)
+		</>
+	)
+}
 
 export default Home

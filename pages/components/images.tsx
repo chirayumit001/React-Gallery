@@ -1,4 +1,4 @@
-const images = [
+const images: { src: string; id: number }[] = [
 	{
 		src: '/images/naruto.png',
 		id: 1,
